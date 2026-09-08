@@ -1,0 +1,13 @@
+{
+  "scenario_id": "S02_OCCLUSION_REVERSAL",
+  "camera_id": "challenge_cam_01",
+  "min_area": 1200,
+  "max_area": 25000,
+  "max_match_distance": 140,
+  "max_coasting_frames": 75,
+  "terminal_zones": ["A", "B"],
+  "zones": {
+    "A": [70, 110, 420, 630],
+    "B": [860, 110, 1210, 630]
+  }
+}

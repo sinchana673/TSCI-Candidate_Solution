@@ -1,0 +1,108 @@
+{
+  "S01_BASIC_GOODS": {
+    "processed_frames": 600,
+    "elapsed_seconds": 24.95,
+    "effective_fps": 24.0,
+    "counts": {
+      "A_TO_B": 2,
+      "B_TO_A": 1
+    },
+    "analytics": {
+      "scenario_id": "S01_BASIC_GOODS",
+      "fps": 25.0,
+      "queue_analytics": {
+        "peak_occupancy": 0,
+        "mean_occupancy": 0.0,
+        "samples": 600
+      },
+      "dwell_analytics": {},
+      "track_speeds_px_per_sec": {
+        "1": 96.3,
+        "2": 89.6,
+        "3": 31.5,
+        "4": 0.0,
+        "5": 80.2,
+        "6": 42.8
+      }
+    }
+  },
+  "S02_OCCLUSION_REVERSAL": {
+    "processed_frames": 750,
+    "elapsed_seconds": 40.09,
+    "effective_fps": 18.7,
+    "counts": {
+      "A_TO_B": 2,
+      "B_TO_A": 1
+    },
+    "analytics": {
+      "scenario_id": "S02_OCCLUSION_REVERSAL",
+      "fps": 25.0,
+      "queue_analytics": {
+        "peak_occupancy": 0,
+        "mean_occupancy": 0.0,
+        "samples": 750
+      },
+      "dwell_analytics": {},
+      "track_speeds_px_per_sec": {
+        "1": 59.1,
+        "2": 55.3,
+        "3": 41.5
+      }
+    }
+  },
+  "S03_DENSE_CROSSING": {
+    "processed_frames": 700,
+    "elapsed_seconds": 32.08,
+    "effective_fps": 21.8,
+    "counts": {
+      "A_TO_B": 3,
+      "B_TO_A": 2
+    },
+    "analytics": {
+      "scenario_id": "S03_DENSE_CROSSING",
+      "fps": 25.0,
+      "queue_analytics": {
+        "peak_occupancy": 0,
+        "mean_occupancy": 0.0,
+        "samples": 700
+      },
+      "dwell_analytics": {},
+      "track_speeds_px_per_sec": {
+        "1": 66.3,
+        "2": 71.0,
+        "3": 63.7,
+        "4": 60.4,
+        "5": 0.0,
+        "6": 56.2,
+        "7": 0.0,
+        "8": 68.5,
+        "9": 75.2
+      }
+    }
+  },
+  "S04_DWELL_QUEUE": {
+    "processed_frames": 800,
+    "elapsed_seconds": 35.74,
+    "effective_fps": 22.4,
+    "counts": {
+      "DWELL_THRESHOLD": 3,
+      "A_TO_B": 3
+    },
+    "analytics": {
+      "scenario_id": "S04_DWELL_QUEUE",
+      "fps": 25.0,
+      "queue_analytics": {
+        "peak_occupancy": 3,
+        "mean_occupancy": 1.11,
+        "samples": 800
+      },
+      "dwell_analytics": {},
+      "track_speeds_px_per_sec": {
+        "1": 50.0,
+        "2": 46.4,
+        "3": 42.9,
+        "4": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "scenario_id": "S04_DWELL_QUEUE",
+  "camera_id": "challenge_cam_01",
+  "min_area": 1200,
+  "max_area": 25000,
+  "max_match_distance": 140,
+  "max_coasting_frames": 65,
+  "dwell_threshold_seconds": 5.0,
+  "terminal_zones": ["A", "B"],
+  "zones": {
+    "A": [70, 100, 400, 630],
+    "QUEUE": [500, 180, 820, 560],
+    "B": [900, 100, 1220, 630]
+  }
+}

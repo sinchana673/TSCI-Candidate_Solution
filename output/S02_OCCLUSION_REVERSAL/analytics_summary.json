@@ -1,0 +1,15 @@
+{
+  "scenario_id": "S02_OCCLUSION_REVERSAL",
+  "fps": 25.0,
+  "queue_analytics": {
+    "peak_occupancy": 0,
+    "mean_occupancy": 0.0,
+    "samples": 750
+  },
+  "dwell_analytics": {},
+  "track_speeds_px_per_sec": {
+    "1": 59.1,
+    "2": 55.3,
+    "3": 41.5
+  }
+}

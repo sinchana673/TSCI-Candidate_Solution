@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NOP Challenge Observation",
+  "type": "object",
+  "required": ["observation_id", "camera_id", "observed_at", "object_type", "event_type", "track_id", "confidence", "evidence", "model"],
+  "properties": {
+    "observation_id": {"type": "string"},
+    "camera_id": {"type": "string"},
+    "observed_at": {"type": "string"},
+    "object_type": {"type": "string"},
+    "event_type": {"type": "string"},
+    "track_id": {"type": ["integer", "string"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "attributes": {"type": "object"},
+    "evidence": {
+      "type": "object",
+      "required": ["image_path"],
+      "properties": {
+        "image_path": {"type": "string"},
+        "clip_path": {"type": "string"}
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"}
+      }
+    }
+  }
+}

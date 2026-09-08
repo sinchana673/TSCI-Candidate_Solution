@@ -1,0 +1,21 @@
+{
+  "scenario_id": "S03_DENSE_CROSSING",
+  "fps": 25.0,
+  "queue_analytics": {
+    "peak_occupancy": 0,
+    "mean_occupancy": 0.0,
+    "samples": 700
+  },
+  "dwell_analytics": {},
+  "track_speeds_px_per_sec": {
+    "1": 66.3,
+    "2": 71.0,
+    "3": 63.7,
+    "4": 60.4,
+    "5": 0.0,
+    "6": 56.2,
+    "7": 0.0,
+    "8": 68.5,
+    "9": 75.2
+  }
+}

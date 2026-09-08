@@ -1,0 +1,14 @@
+{
+  "scenario_id": "GENERIC_VIDEO",
+  "camera_id": "challenge_cam_01",
+  "min_area": 1000,
+  "max_area": 30000,
+  "max_match_distance": 130,
+  "max_coasting_frames": 60,
+  "dwell_threshold_seconds": 5.0,
+  "terminal_zones": ["A", "B"],
+  "zones": {
+    "A": [50, 80, 420, 640],
+    "B": [860, 80, 1230, 640]
+  }
+}

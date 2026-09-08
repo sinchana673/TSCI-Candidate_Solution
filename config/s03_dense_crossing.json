@@ -1,0 +1,13 @@
+{
+  "scenario_id": "S03_DENSE_CROSSING",
+  "camera_id": "challenge_cam_01",
+  "min_area": 1200,
+  "max_area": 25000,
+  "max_match_distance": 130,
+  "max_coasting_frames": 80,
+  "terminal_zones": ["A", "B"],
+  "zones": {
+    "A": [60, 90, 400, 650],
+    "B": [880, 90, 1220, 650]
+  }
+}

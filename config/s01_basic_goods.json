@@ -1,0 +1,13 @@
+{
+  "scenario_id": "S01_BASIC_GOODS",
+  "camera_id": "challenge_cam_01",
+  "min_area": 1200,
+  "max_area": 25000,
+  "max_match_distance": 140,
+  "max_coasting_frames": 65,
+  "terminal_zones": ["A", "B"],
+  "zones": {
+    "A": [80, 120, 430, 620],
+    "B": [850, 120, 1200, 620]
+  }
+}

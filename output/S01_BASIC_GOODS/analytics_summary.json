@@ -1,0 +1,18 @@
+{
+  "scenario_id": "S01_BASIC_GOODS",
+  "fps": 25.0,
+  "queue_analytics": {
+    "peak_occupancy": 0,
+    "mean_occupancy": 0.0,
+    "samples": 600
+  },
+  "dwell_analytics": {},
+  "track_speeds_px_per_sec": {
+    "1": 96.3,
+    "2": 89.6,
+    "3": 31.5,
+    "4": 0.0,
+    "5": 80.2,
+    "6": 42.8
+  }
+}

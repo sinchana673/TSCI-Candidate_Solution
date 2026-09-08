@@ -1,0 +1,16 @@
+{
+  "scenario_id": "S04_DWELL_QUEUE",
+  "fps": 25.0,
+  "queue_analytics": {
+    "peak_occupancy": 3,
+    "mean_occupancy": 1.11,
+    "samples": 800
+  },
+  "dwell_analytics": {},
+  "track_speeds_px_per_sec": {
+    "1": 50.0,
+    "2": 46.4,
+    "3": 42.9,
+    "4": 0.0
+  }
+}

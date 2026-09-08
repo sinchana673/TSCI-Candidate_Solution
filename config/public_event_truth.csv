@@ -1,0 +1,15 @@
+scenario_id,object_id,event_type,notes
+S01_BASIC_GOODS,1,A_TO_B,clean crossing
+S01_BASIC_GOODS,2,A_TO_B,clean crossing
+S01_BASIC_GOODS,3,B_TO_A,clean reverse direction
+S02_OCCLUSION_REVERSAL,11,A_TO_B,occlusion challenge
+S02_OCCLUSION_REVERSAL,12,B_TO_A,reversal before completion
+S02_OCCLUSION_REVERSAL,13,A_TO_B,stop and resume
+S03_DENSE_CROSSING,21,A_TO_B,dense crossing
+S03_DENSE_CROSSING,22,A_TO_B,dense crossing
+S03_DENSE_CROSSING,23,B_TO_A,dense crossing
+S03_DENSE_CROSSING,24,B_TO_A,dense crossing
+S03_DENSE_CROSSING,25,A_TO_B,dense crossing
+S04_DWELL_QUEUE,31,A_TO_B,queue dwell
+S04_DWELL_QUEUE,32,A_TO_B,queue dwell
+S04_DWELL_QUEUE,33,A_TO_B,queue dwell
