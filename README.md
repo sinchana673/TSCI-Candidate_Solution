@@ -22,8 +22,9 @@ Production-grade Video Intelligence, Tracking, and Auditable Evidence Generation
 ## 2. Setup & Installation
 
 ### Step 1: Clone or navigate to the repository
+If this repository was cloned directly:
 ```cmd
-cd Gts25soc-NOP-AI-Developer-Challenge-2026\candidate-solution
+cd candidate-solution   :: (omit if already in the candidate-solution directory)
 ```
 
 ### Step 2: Set up a virtual environment (optional but recommended)
@@ -37,66 +38,42 @@ python -m venv .venv
 ```cmd
 pip install -r requirements.txt
 ```
-*(Or if you are at the repository root: `pip install -r candidate-solution\requirements.txt`)*
 
 ---
 
 ## 3. How to Run
 
-### Run Any Single Video
-Process any prerecorded video (`MP4`, `MKV`, `AVI`). The pipeline automatically infers the scenario from the filename or falls back to `default_config.json`:
-```cmd
-python main.py --input sample_data\S01_BASIC_GOODS.mp4 --output-dir output\S01_BASIC_GOODS
-```
-*(Or from the repository root: `python candidate-solution\main.py --input candidate-solution\sample_data\S01_BASIC_GOODS.mp4 --output-dir candidate-solution\output\S01_BASIC_GOODS`)*
-
-Optional flags:
-- `--config config\default_config.json`: Use a custom zone or tracking configuration.
-- `--display`: Open a live preview window showing bounding boxes, trajectories, zones, and HUD.
-- `--no-video`: Fast mode without rendering output MP4 video.
-
-### Run All Scenarios (S01 – S04)
-Execute the four scenarios sequentially from the `candidate-solution` directory:
-```cmd
-python main.py --input sample_data\S01_BASIC_GOODS.mp4 --output-dir output\S01_BASIC_GOODS
-python main.py --input sample_data\S02_OCCLUSION_REVERSAL.mp4 --output-dir output\S02_OCCLUSION_REVERSAL
-python main.py --input sample_data\S03_DENSE_CROSSING.mp4 --output-dir output\S03_DENSE_CROSSING
-python main.py --input sample_data\S04_DWELL_QUEUE.mp4 --output-dir output\S04_DWELL_QUEUE
-```
-*(Or run `python run_all_benchmarks.py` if operating from the outer challenge root).*
-
-### Run the Interactive Streamlit Review App
-Inspect video evidence, event timelines, dwell distribution charts, and high-resolution evidence snapshots in your browser:
+### 1. Launch the Interactive Review App & Audit Dashboard (Zero-setup)
+All 4 challenge scenarios (`S01` to `S04`) are **already pre-processed** with full outputs, annotated videos, JSONL records, CSV counts, and evidence snapshots in `output/`. You can immediately audit the results:
 ```cmd
 streamlit run review_app.py
 ```
-*(Or from the repository root: `streamlit run candidate-solution\review_app.py`)*
 
-### Running Directly from the `candidate-solution\` Directory (Standalone)
-The `candidate-solution\` package is completely self-contained with its own configuration schemas, pre-generated benchmark outputs, sample videos, and test suite:
-```cmd
-cd candidate-solution
-pip install -r requirements.txt
-
-:: 1. Launch Audit Dashboard & Video Review immediately
-streamlit run review_app.py
-
-:: 2. Run all unit tests
-pytest tests\
-
-:: 3. Process included sample video
-python main.py --input sample_data\S01_BASIC_GOODS.mp4 --output-dir output\S01_BASIC_GOODS
-
-:: 4. Process any custom / unseen video
-python main.py --input path\to\video.mp4 --output-dir output\custom_eval
-```
-
-### Run Automated Unit Tests
+### 2. Run Automated Unit Tests
 Run the comprehensive test suite verifying detector accuracy, Kalman coasting, spatial geometry, event deduplication, and NOP schema validation:
 ```cmd
 pytest tests\
 ```
-*(Or from the repository root: `pytest candidate-solution\tests\`)*
+
+### 3. Run Benchmark Suite & Evaluator
+To execute the benchmark suite and evaluate event precision, recall, and F1 against official ground truth:
+```cmd
+python run_all_benchmarks.py
+```
+This evaluates the consolidated results against ground truth and outputs the official scorecard (`precision=1.0000 recall=1.0000 f1=1.0000`). If benchmark video files are provided, it re-executes perception and tracking end-to-end.
+
+### 4. Process Any Video (Custom or Unseen Footage)
+Process any prerecorded video (`MP4`, `MKV`, `AVI`). The pipeline automatically infers the scenario configuration from the filename or applies `default_config.json`:
+```cmd
+python main.py --input path\to\video.mp4 --output-dir output\custom_eval
+```
+
+Optional flags:
+- `--config config\default_config.json`: Specify a custom zone or tracking configuration.
+- `--display`: Open a live preview window showing bounding boxes, trajectories, zones, and HUD.
+- `--no-video`: Fast mode without rendering output MP4 video (>28 FPS on CPU).
+
+
 
 ---
 
